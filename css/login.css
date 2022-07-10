@@ -1,0 +1,45 @@
+body {
+    background-image: url('./images/pixabay.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.208);
+    padding: 3em;
+    backdrop-filter: blur(8px);
+}
+
+.linkbtn a {
+    padding: 1px 6px;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* -------------staff signup--------------- */
+.form_container {
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 70%;
+    margin: 1em auto;
+    background-color: white;
+    padding: 10px;
+}
+
+.form_container .signup_form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 10px;
+    min-width: 95%;
+}
+
+

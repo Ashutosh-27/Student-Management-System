@@ -1,0 +1,488 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 04, 2022 at 06:38 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `studentmanagement`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignments`
+--
+
+CREATE TABLE `assignments` (
+  `id` int(5) NOT NULL,
+  `title` varchar(60) NOT NULL,
+  `subject` varchar(20) NOT NULL,
+  `from_a` varchar(20) NOT NULL,
+  `pdf` varchar(250) NOT NULL,
+  `submission_dt` date NOT NULL,
+  `description` text NOT NULL,
+  `Assigned_dt` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `assignments`
+--
+
+INSERT INTO `assignments` (`id`, `title`, `subject`, `from_a`, `pdf`, `submission_dt`, `description`, `Assigned_dt`) VALUES
+(1, 'Assignment-1', 'DATA Analytics', 'admin-9', 'assignment_files/01 QP_Prelims_2021-22_XII_ENGLISH.pdf', '2022-05-13', 'Created assignment', '2022-05-03 13:13:44'),
+(2, 'as', 'DataAnalytics', 'admin-9', 'assignment_files/DA_Practice_Programs.pdf', '2022-06-12', 'asdasd', '2022-06-02 07:53:56'),
+(3, 'Assignment-1', 'Operating System', 'lorem IPsum', 'assignment_files/Mhcetapp.pdf', '2022-06-10', 'checking of assignment', '2022-06-02 08:52:27'),
+(4, 'assignment-2', 'Operating System', 'lorem IPsum', 'assignment_files/Institute_Management_System(php_html)(3832_aishwarya)(3813_Supriya).pdf', '2022-06-18', 'sadas', '2022-06-02 11:45:50'),
+(5, 'data analytics', 'statistics', 'sairaj', 'assignment_files/102427562-45883498-Project-Report-on-Student-Information-Management-System-Php-Mysql.pdf', '2022-06-04', 'submit on time', '2022-06-03 13:56:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cc_notes`
+--
+
+CREATE TABLE `cc_notes` (
+  `id` int(11) NOT NULL,
+  `byStudent` varchar(20) NOT NULL,
+  `chapter1` longtext NOT NULL,
+  `chapter2` longtext NOT NULL,
+  `chapter3` longtext NOT NULL,
+  `chapter4` longtext NOT NULL,
+  `chapter5` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `da_notes`
+--
+
+CREATE TABLE `da_notes` (
+  `id` int(11) NOT NULL,
+  `byStudent` varchar(20) NOT NULL,
+  `chapter1` longtext NOT NULL,
+  `chapter2` longtext NOT NULL,
+  `chapter3` longtext NOT NULL,
+  `chapter4` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `java_notes`
+--
+
+CREATE TABLE `java_notes` (
+  `id` int(11) NOT NULL,
+  `byStudent` varchar(20) NOT NULL,
+  `chapter1` longtext NOT NULL,
+  `chapter2` longtext NOT NULL,
+  `chapter3` longtext NOT NULL,
+  `chapter4` longtext NOT NULL,
+  `chapter5` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `java_notes`
+--
+
+INSERT INTO `java_notes` (`id`, `byStudent`, `chapter1`, `chapter2`, `chapter3`, `chapter4`, `chapter5`) VALUES
+(1, '3964', '', '<p>BRoly SUper</p>', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notice`
+--
+
+CREATE TABLE `notice` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `from_a` varchar(100) NOT NULL,
+  `about` varchar(200) NOT NULL,
+  `descp` text NOT NULL,
+  `date_time` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `notice`
+--
+
+INSERT INTO `notice` (`id`, `title`, `from_a`, `about`, `descp`, `date_time`) VALUES
+(1, 'RamNavmi', 'admin-9', 'Holiday on account of RamNavmi', 'HOliday is declared att', '2022-05-03 11:34:23'),
+(2, 'Akshay Tritiya', 'lorem', 'akshay tritiya holiday', 'HOliday', '2022-05-03 12:01:35'),
+(3, 'RamNavmi', 'admin-9', 'Holiday on account of RamNavmi', 'adsa', '2022-06-02 07:53:40'),
+(4, 'CREAtE Notice', 'lorem IPsum', 'Testing functionalioty', 'test Procceeded', '2022-06-02 08:24:04'),
+(5, 'holiday', 'sairaj', 'weekend', 'enjoy', '2022-06-03 13:55:42'),
+(6, 'holiday', 'lorem IPsum', 'weekend', 'enjoy', '2022-06-04 11:52:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `os_notes`
+--
+
+CREATE TABLE `os_notes` (
+  `id` int(11) NOT NULL,
+  `byStudent` varchar(50) NOT NULL,
+  `chapter1` longtext NOT NULL,
+  `chapter2` longtext NOT NULL,
+  `chapter3` longtext NOT NULL,
+  `chapter4` longtext NOT NULL,
+  `chapter5` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `os_notes`
+--
+
+INSERT INTO `os_notes` (`id`, `byStudent`, `chapter1`, `chapter2`, `chapter3`, `chapter4`, `chapter5`) VALUES
+(1, '3964', '\r\n                    <h1>Hi Sashi Buri Dana Mugiwara boi</h1>\r\nsairaj deora\r\n                    ', '<h1>Gear Third0</h1>', '', '', ''),
+(2, '3966', '', '', '<h1>Iama Arjun check for chap 1</h1>', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studentslobby`
+--
+
+CREATE TABLE `studentslobby` (
+  `id` int(255) NOT NULL,
+  `rollno` varchar(5) NOT NULL,
+  `studentname` varchar(50) NOT NULL,
+  `password` varchar(15) NOT NULL,
+  `img` varchar(250) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `std` varchar(20) NOT NULL,
+  `division` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `studentslobby`
+--
+
+INSERT INTO `studentslobby` (`id`, `rollno`, `studentname`, `password`, `img`, `email`, `std`, `division`) VALUES
+(1, '3964', 'Ashutosh Potdar', '2001', 'students_images/Vegito2.jpg', 'ashutoshpotdar@mystudetn.com', 'TY-BCS', 'B'),
+(2, '3966', 'Arjun Ranka', '3964', 'students_images/1.png', 'arjun@mystudent.com', 'TY BCS', 'B'),
+(3, '4', 'Rohit HV', '2001', 'students_images/zoro.jpg', 'rohithv@mystudent.com', 'TY BCS', 'B');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `st_notes`
+--
+
+CREATE TABLE `st_notes` (
+  `id` int(11) NOT NULL,
+  `byStudent` varchar(20) NOT NULL,
+  `chapter1` longtext NOT NULL,
+  `chapter2` longtext NOT NULL,
+  `chapter3` longtext NOT NULL,
+  `chapter4` longtext NOT NULL,
+  `chapter5` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subjectmaterials`
+--
+
+CREATE TABLE `subjectmaterials` (
+  `subject_code` int(20) NOT NULL,
+  `Subject_name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `chapter1` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `chapter2` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `chapter3` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `chapter4` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `chapter5` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `chapter6` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `subjectmaterials`
+--
+
+INSERT INTO `subjectmaterials` (`subject_code`, `Subject_name`, `chapter1`, `chapter2`, `chapter3`, `chapter4`, `chapter5`, `chapter6`) VALUES
+(1, 'Operating System', '{\"chap_name\":\"Process Deadlocks\",\"pdf\":\"subjectmaterials/OSchap1.pdf\"}', '{\"chap_name\":\"File system Management \",\"pdf\":\"subjectmaterials/OSchap2.pdf\"}', '{\"chap_name\":\"Disk scheduling\",\"pdf\":\"subjectmaterials/OSchap3.pdf\"}', '{\"chap_name\":\"Introduction to Distributed operating systems andArchitecture\",\r\n\"pdf\":\"subjectmaterials/OSchap4.pdf\"}', '{\"chap_name\":\"Mobile Operating Systems\",\"pdf\":\"subjectmaterials/OSchap5.pdf\"}', '{\"chap_name\":\"none\",\"pdf\":\"none\"}'),
+(2, ' Software Testing\r\n', '{\"chap_name\":\"Introduction to Software Testing\",\"pdf\":\"subjectmaterials/STchap1.pdf\"}', '{\"chap_name\":\"Software Testing Strategies & Techniques\",\"pdf\":\"subjectmaterials/STchap2.pdf\"}', '{\"chap_name\":\"Levels of Testing\",\"pdf\":\"subjectmaterials/STchap3.pdf\"}', '{\"chap_name\":\"Testing Web Applications\",\"pdf\":\"subjectmaterials/STchap4.pdf\"}', '{\"chap_name\":\"Agile Testing\",\"pdf\":\"subjectmaterials/STchap5.pdf\"}', '{\"chap_name\":\"none\",\"pdf\":\"none\"}'),
+(3, 'Web Technologies - II', ' {\"chap_name\":\"Introduction to Web Techniques\",\"pdf\":\"subjectmaterials/WTchap1.pdf\"}', ' {\"chap_name\":\"XML\",\"pdf\":\"subjectmaterials/WTchap1.pdf\"}', ' {\"chap_name\":\"Java Script and Jquery\",\"pdf\":\"subjectmaterials/WTchap1.pdf\"}', ' {\"chap_name\":\"AJAX\",\"pdf\":\"subjectmaterials/WTchap1.pdf\"}', ' {\"chap_name\":\"PHP framework CodeIgniter\",\"pdf\":\"subjectmaterials/WTchap1.pdf\"}', ' {\"chap_name\":\"none\",\"pdf\":\"none\"}'),
+(4, 'Data Analytics', '{\"chap_name\":\"Introduction to Data Analytics\",\"pdf\":\"subjectmaterials/DAchap1.pdf\"}', '{\"chap_name\":\"Machine Learning Overview\",\"pdf\":\"subjectmaterials/DAchap2.pdf\"}', '{\"chap_name\":\"Minig Frequent patterns Assocaition Correlation\",\"pdf\":\"subjectmaterials/DAchap2.pdf\"}', '{\"chap_name\":\"Social Media and Text Analytics\",\"pdf\":\"subjectmaterials/DAchap4.pdf\"}', '{\"chap_name\":\"none\",\"pdf\":\"none\"}', '{\"chap_name\":\"none\",\"pdf\":\"none\"}'),
+(5, 'Java – II', '{\"chap_name\":\"Collections\",\"pdf\":\"subjectmaterials/JAVAchap1.pdf\"}', '{\"chap_name\":\"Multithreading\",\"pdf\":\"subjectmaterials/JAVAchap2.pdf\"}', '{\"chap_name\":\"Database Programming\",\"pdf\":\"subjectmaterials/JAVAchap3.pdf\"}', '{\"chap_name\":\"Servlets and JSP\",\"pdf\":\"subjectmaterials/JAVAchap4.pdf\"}', '{\"chap_name\":\"Spring Framework\",\"pdf\":\"subjectmaterials/JAVAchap5.pdf\"}', '{\"chap_name\":\"none\",\"pdf\":\"none\"}'),
+(6, 'Compiler Construction', '{\"chap_name\":\"Introduction\",\"pdf\":\"subjectmaterials/CCchap1.pdf\"}', '{\"chap_name\":\"Lexical Analysis (Scanner)\",\"pdf\":\"subjectmaterials/CCchap2.pdf\"}', '{\"chap_name\":\"Syntax Analysis (Parser)\",\"pdf\":\"subjectmaterials/CCchap3.pdf\"}', '{\"chap_name\":\"Syntax Directed Definition \",\"pdf\":\"subjectmaterials/CCchap4.pdf\"}', '{\"chap_name\":\"Code Generation and Optimization\",\"pdf\":\"subjectmaterials/CCchap5.pdf\"}', '{\"chap_name\":\"none\",\"pdf\":\"none\"}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `submittedassignments`
+--
+
+CREATE TABLE `submittedassignments` (
+  `id` int(11) NOT NULL,
+  `subject` varchar(250) DEFAULT NULL,
+  `title` varchar(250) DEFAULT NULL,
+  `student_id` varchar(250) DEFAULT NULL,
+  `uploaded_file` varchar(300) DEFAULT NULL,
+  `time` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `submittedassignments`
+--
+
+INSERT INTO `submittedassignments` (`id`, `subject`, `title`, `student_id`, `uploaded_file`, `time`) VALUES
+(9, 'Operating System', 'Assignment-1', '3964', 'assignmentsUploaded/DA_Practice_Programs.pdf', '2022-06-02 08:18:44'),
+(11, 'DATA Analytics', 'Assignment-1', '3964', 'assignmentsUploaded/102427562-45883498-Project-Report-on-Student-Information-Management-System-Php-Mysql.pdf', '2022-06-03 13:43:43'),
+(14, 'statistics', 'data analytics', '3964', 'assignmentsUploaded/102427562-45883498-Project-Report-on-Student-Information-Management-System-Php-Mysql.pdf', '2022-06-04 19:16:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacherslobby`
+--
+
+CREATE TABLE `teacherslobby` (
+  `id` int(200) NOT NULL,
+  `code` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `post` varchar(20) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `subject` varchar(50) NOT NULL,
+  `subject_code` int(20) NOT NULL,
+  `workemail` varchar(50) NOT NULL,
+  `contact` varchar(50) NOT NULL,
+  `img` varchar(350) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `teacherslobby`
+--
+
+INSERT INTO `teacherslobby` (`id`, `code`, `password`, `post`, `username`, `subject`, `subject_code`, `workemail`, `contact`, `img`) VALUES
+(3, '23F7', 'admin20', 'admin', 'admin-9', 'Data Analytics', 4, 'admin@mystudent.com', '345-678', ''),
+(4, '3A80', 'lorem', 'Proffesor', 'lorem IPsum', 'Operating System', 0, 'loremIpsum@myStudent.com', '23456 98234', 'teachers_pfp/cryptologo.png'),
+(8, '3A81', '9850', 'professor', 'sairaj', 'statistics', 3, 'adminacc@mystudent.com', '345-567-8902', 'teachers_pfp/'),
+(9, '', '', '', '', 'OperatingSystem', 1, '', '', 'teachers_pfp/'),
+(10, '23T1', '234', 'professor', 'sairaj', 'Web Technologies - II', 3, 'adminacc@mystudent.com', '345-567-8902', 'teachers_pfp/');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacherstodos`
+--
+
+CREATE TABLE `teacherstodos` (
+  `id` int(10) NOT NULL,
+  `from_a` varchar(150) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `descprition` text NOT NULL,
+  `dueDT` date NOT NULL,
+  `assigned_dt` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `teacherstodos`
+--
+
+INSERT INTO `teacherstodos` (`id`, `from_a`, `title`, `descprition`, `dueDT`, `assigned_dt`) VALUES
+(1, '0', '0', '0', '0000-00-00', '2022-06-04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wt_notes`
+--
+
+CREATE TABLE `wt_notes` (
+  `id` int(11) NOT NULL,
+  `byStudent` varchar(20) NOT NULL,
+  `chapter1` longtext DEFAULT NULL,
+  `chapter2` longtext DEFAULT NULL,
+  `chapter3` longtext DEFAULT NULL,
+  `chapter4` longtext DEFAULT NULL,
+  `chapter5` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `assignments`
+--
+ALTER TABLE `assignments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `description` (`description`(768));
+
+--
+-- Indexes for table `cc_notes`
+--
+ALTER TABLE `cc_notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `da_notes`
+--
+ALTER TABLE `da_notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `java_notes`
+--
+ALTER TABLE `java_notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notice`
+--
+ALTER TABLE `notice`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `os_notes`
+--
+ALTER TABLE `os_notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `studentslobby`
+--
+ALTER TABLE `studentslobby`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `st_notes`
+--
+ALTER TABLE `st_notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `subjectmaterials`
+--
+ALTER TABLE `subjectmaterials`
+  ADD PRIMARY KEY (`subject_code`);
+
+--
+-- Indexes for table `submittedassignments`
+--
+ALTER TABLE `submittedassignments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teacherslobby`
+--
+ALTER TABLE `teacherslobby`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teacherstodos`
+--
+ALTER TABLE `teacherstodos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wt_notes`
+--
+ALTER TABLE `wt_notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `assignments`
+--
+ALTER TABLE `assignments`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `cc_notes`
+--
+ALTER TABLE `cc_notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `da_notes`
+--
+ALTER TABLE `da_notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `java_notes`
+--
+ALTER TABLE `java_notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `notice`
+--
+ALTER TABLE `notice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `os_notes`
+--
+ALTER TABLE `os_notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `studentslobby`
+--
+ALTER TABLE `studentslobby`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `st_notes`
+--
+ALTER TABLE `st_notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `subjectmaterials`
+--
+ALTER TABLE `subjectmaterials`
+  MODIFY `subject_code` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `submittedassignments`
+--
+ALTER TABLE `submittedassignments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `teacherslobby`
+--
+ALTER TABLE `teacherslobby`
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `teacherstodos`
+--
+ALTER TABLE `teacherstodos`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `wt_notes`
+--
+ALTER TABLE `wt_notes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

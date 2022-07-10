@@ -1,0 +1,150 @@
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.row {
+    height: 40em;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.profile_info {
+    padding: 20px;
+    width: 100%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin-bottom:0 ;
+}
+
+.profile_info .img_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 220px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.profile_info .img_container strong {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.profile_info .info_container {
+    padding: 10px;
+    width: 50%;
+}
+
+.profile_info .info_container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+}
+
+.profile_info .info_container ul li {
+    margin: auto;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile_info .info_container ul li span:nth-child(2) {
+    font-size: 22px;
+    margin: 0 1em;
+    font-weight: 600;
+}
+
+.profile_info_2 {
+    border: 1px solid;
+    height: 100%;
+    padding: 0;
+}
+
+.db_info .buttons_container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.add_form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 10px;
+}
+
+.create-Assignment_form .inputs_container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 10px;
+}
+
+.view_notices,.view_subject,.view_assignments,.view_staff,.view_students {
+    margin: 5em auto;
+}
+
+table {
+    margin: 1em auto;
+}
+
+
+
+
+
+.reports{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 150px auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.reports .card{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.reports .card span:nth-child(1){
+    font-size: 17px;
+}
+
+.reports .card span:nth-child(2){
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 27px;
+}
